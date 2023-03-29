@@ -5,5 +5,14 @@ header {
     background-color: rgba(214, 26, 26, 0.914);
     color: bisque;
     font-size: x-large;
+    box-shadow: 0px 0px 40px 20px maroon;
 
+}
+
+.container {
+    background-image:url('Retro Picture.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
 }
