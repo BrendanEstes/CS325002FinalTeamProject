@@ -33,9 +33,9 @@ header {
     position: relative;
     outline: solid 5px;
     padding: 5px;
-    width: 10%;
-    top: -20px;
-    height: 160px;
+    width: 200px;
+    top: -25px;
+    height: 200px;
 }
 
 section {
