@@ -6,7 +6,6 @@ header {
     color: bisque;
     font-size: x-large;
     box-shadow: 0px 0px 40px 20px maroon;
-
 }
 .container {
     background-image:url('Retro Picture.png');
@@ -33,7 +32,7 @@ header {
     position: relative;
     outline: solid 5px;
     padding: 5px;
-    width: 200px;
+    width: 150px;
     top: -25px;
     height: 200px;
 }
@@ -46,3 +45,20 @@ section {
     text-shadow: 0px 0px 50px 5px palevioletred;
 
 }
+
+.col {
+    font-size: larger;
+    position:absolute;
+    top: 12px;
+    right: 40%;
+    padding: 3px;
+    border: solid black;
+    animation: blinker .85s linear infinite;
+    box-shadow: 0px 0px 60px rgb(9, 48, 156)lue;
+}
+
+    @keyframes blinker {
+        50% {
+            opacity: 0;
+        }
+    }
