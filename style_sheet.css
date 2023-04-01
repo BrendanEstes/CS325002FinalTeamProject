@@ -57,6 +57,55 @@ section {
     box-shadow: 0px 0px 60px rgb(9, 48, 156)lue;
 }
 
+.snakegame{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    text-align:center;
+
+  }
+
+  canvas {
+    border: 1px solid white;
+    background: black;
+  }
+
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    }
+    
+    .modal-content {
+        text-align:center;
+    }
+    
+    .select-game{
+        display: block;
+        }
+    
+    .pacmanbtn{
+        background-image:url('pacman.png');
+        background-size: cover;
+        width: 200px;
+        height: 200px;
+    }
+    .bombermanbtn{
+        background-image:url('bomberman.png');
+        background-size: cover;
+        width: 200px;
+        height: 200px;
+    }
+    .snakebtn{
+        background-image:url('snake.png');
+        background-size: cover;
+        width: 200px;
+        height: 200px;
+    }
+
     @keyframes blinker {
         50% {
             opacity: 0;
