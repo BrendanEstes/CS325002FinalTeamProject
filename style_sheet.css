@@ -7,3 +7,10 @@ header {
     font-size: x-large;
 
 }
+.container {
+    background-image:url('Retro Picture.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+}
