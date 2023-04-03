@@ -11,7 +11,7 @@
 <body class="container">
     <script type="script/javascript" src="sweetofgames_script.js"></script>
     <div class="score1"><!--container showing the time scoreboard   -->
-        Time Played: <span id="playtime">00:00</span>
+        Time Played: <span id="playtime">0</span> seconds
     </div>
     <div class="score2">
         <section class="pacman">
@@ -41,28 +41,23 @@
             </p>
         </div>
     </div>
-    
     <div class="snakegame">
         <canvas width="400" height="400" id="game"></canvas>
     </div>
 
-    <script type="text/javascript">
-        let playtimeDisplay = document.getElementById("playtime");
-        let seconds = 0, minutes = 0, hours = 0;
-        setInterval(function(){
-            seconds++;
-            if (seconds == 60) {
-                minutes++;
-                seconds = 0;
-            }
-            if (minutes == 60) {
-                hours++;
-                minutes = 0;
-            }
-            let time = (hours ? (hours > 9 ? hours : "0" + hours) : "00") + ":" + (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds);
-            playtimeDisplay.innerText = time;
-        }, 1000);
+    <script>
+        // game script
+        var startTime;
+        function startGame() {
+            startTime = Date.now();
+            // other game initialization code
+        }
+        function endGame() {
+            var endTime = Date.now();
+            var playtime = Math.floor((endTime - startTime) / 1000);
+            document.getElementById("playtime").innerText = playtime;
+            // other game ending code
+        }
     </script>
-
 </body>
 </html>
