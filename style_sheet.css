@@ -47,7 +47,7 @@ section {
 }
 
 .col {
-    font-size: larger;
+    font-size: medium;
     position:absolute;
     top: 12px;
     right: 40%;
@@ -55,6 +55,18 @@ section {
     border: solid black;
     animation: blinker .85s linear infinite;
     box-shadow: 0px 0px 60px rgb(9, 48, 156)lue;
+}
+
+.backbtn {
+    font-size: larger;
+    position: absolute;
+    top: 12px;
+    padding: 3px;
+    color: white;
+    background-color: red;
+    cursor: pointer;
+    left: 1%;
+    border: solid black;
 }
 
 .snakegame{
@@ -65,10 +77,41 @@ section {
 
   }
 
-  canvas {
+#snakecanvas {
     border: 1px solid white;
     background: black;
-  }
+}
+
+.bombermangame {
+    display: none;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+#bombermancanvas {
+    border: 1px solid white;
+    background: forestgreen;
+}
+
+.pacmangame {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#pacmancanvas {
+    border: 1px solid white;
+    background: black;
+    background-image: url('pacmansoon.png');
+}
+
 
 
 .modal {
@@ -86,24 +129,27 @@ section {
     .select-game{
         display: block;
         }
-    
-    .pacmanbtn{
-        background-image:url('pacman.png');
+
+    .pacmanbtn {
+        background-image: url('pacman.png');
         background-size: cover;
         width: 200px;
         height: 200px;
+        cursor: pointer;
     }
-    .bombermanbtn{
-        background-image:url('bomberman.png');
+    .bombermanbtn {
+        background-image: url('bomberman.png');
         background-size: cover;
         width: 200px;
         height: 200px;
+        cursor: pointer;
     }
-    .snakebtn{
-        background-image:url('snake.png');
+    .snakebtn {
+        background-image: url('snake.png');
         background-size: cover;
         width: 200px;
         height: 200px;
+        cursor: pointer;
     }
 
     @keyframes blinker {
@@ -111,3 +157,13 @@ section {
             opacity: 0;
         }
     }
+
+.click-command {
+    text-align: center;
+    color: black;
+    padding: 7px;
+    border: 5px;
+    height: auto;
+    background-color: violet;
+    box-shadow: 0px 0px 60px 10px violet;
+}
