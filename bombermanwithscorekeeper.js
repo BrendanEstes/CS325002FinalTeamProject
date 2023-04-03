@@ -1,30 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Basic Bomberman HTML Game</title>
-  <meta charset="UTF-8">
-  <style>
-  html, body {
-    height: 100%;
-    margin: 0;
-  }
-
-  body {
-    background: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  canvas {
-    background: forestgreen;
-  }
-  </style>
-</head>
-<body>
-<canvas width="960" height="832" id="game"></canvas>
-<script>
-  const canvas = document.getElementById('game');
+const canvas = document.getElementById('game');
 const context = canvas.getContext('2d');
 const grid = 64;
 const numRows = 13;
