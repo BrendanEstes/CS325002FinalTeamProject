@@ -1,7 +1,7 @@
-<!-- HTML code for the game -->
+//<!-- HTML code for the game -->
 <div id="game"></div>
 
-<!-- JavaScript code to track time played -->
+//<!-- JavaScript code to track time played -->
 <script>
   const game = document.getElementById("game");
   let startTime, endTime;
