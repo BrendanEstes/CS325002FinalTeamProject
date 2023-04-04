@@ -47,7 +47,7 @@ section {
 }
 
 .col {
-    font-size: larger;
+    font-size: medium;
     position:absolute;
     top: 12px;
     right: 40%;
@@ -57,8 +57,113 @@ section {
     box-shadow: 0px 0px 60px rgb(9, 48, 156)lue;
 }
 
+.backbtn {
+    font-size: larger;
+    position: absolute;
+    top: 12px;
+    padding: 3px;
+    color: white;
+    background-color: red;
+    cursor: pointer;
+    left: 1%;
+    border: solid black;
+}
+
+.snakegame{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    text-align:center;
+
+  }
+
+#snakecanvas {
+    border: 1px solid white;
+    background: black;
+}
+
+.bombermangame {
+    display: none;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+#bombermancanvas {
+    border: 1px solid white;
+    background: forestgreen;
+}
+
+.pacmangame {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#pacmancanvas {
+    border: 1px solid white;
+    background: black;
+    background-image: url('pacmansoon.png');
+}
+
+
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    }
+    
+    .modal-content {
+        text-align:center;
+    }
+    
+    .select-game{
+        display: block;
+        }
+
+    .pacmanbtn {
+        background-image: url('pacman.png');
+        background-size: cover;
+        width: 200px;
+        height: 200px;
+        cursor: pointer;
+    }
+    .bombermanbtn {
+        background-image: url('bomberman.png');
+        background-size: cover;
+        width: 200px;
+        height: 200px;
+        cursor: pointer;
+    }
+    .snakebtn {
+        background-image: url('snake.png');
+        background-size: cover;
+        width: 200px;
+        height: 200px;
+        cursor: pointer;
+    }
+
     @keyframes blinker {
         50% {
             opacity: 0;
         }
     }
+
+.click-command {
+    text-align: center;
+    color: black;
+    padding: 7px;
+    border: 5px;
+    height: auto;
+    background-color: violet;
+    box-shadow: 0px 0px 60px 10px violet;
+}

@@ -10,13 +10,14 @@
 <header><b>Retro Bundle</b></header>
 <body class="container">
     <script type="script/javascript" src="sweetofgames_script.js"></script>
-    <div class="score1"><!--container showing the time scoreboard   -->
+    <div class="score1">
+        <!--container showing the time scoreboard   -->
         Time Played
     </div>
     <div class="score2">
         <section class="pacman">
             PacMan:
-            <script type="text/javascript" src="sweetofgames_script.js" ></script>
+            <script type="text/javascript" src="sweetofgames_script.js"></script>
         </section><br>
         <section class="bomberman">
             BomberMan:
@@ -27,6 +28,37 @@
     </div>
     <div class="col">
         <a href="login.html" class="btn btn-light btn-block">Log In</a>
+    </div>
+    <div>
+        <button onclick="backbtn()" class="backbtn"> ◄ BACK / HOME  </button>
+    </div>
+    <div class="snakegame">
+        <canvas width="400" height="400" id="snakecanvas"></canvas>
+        <script>
+            var canvas = document.getElementById('snakecanvas');
+            const context = canvas.getContext('2d');
+        </script>
+    </div>
+
+    <div class="bombermangame">
+        <canvas width="960" height="832" id="bombermancanvas"></canvas>
+    </div>
+
+    <div class="pacmangame">
+        <canvas width="1024" height="576" id="pacmancanvas"></canvas>
+    </div>
+
+    <div class="select-game modal">
+        <div class="modal-content">
+            <h1 class="click-command">Click A Game!</h1>
+            <p>
+                <button onclick="pacmanclicked()" class="pacmanbtn" id="playpacman"></button>
+                &nbsp&nbsp&nbsp
+                <button onclick="bombermanclicked()" class="bombermanbtn" id="playbomberman"></button>
+                &nbsp&nbsp&nbsp
+                <button onclick="snakeclicked()" class="snakebtn" id="playsnake">   </button>
+            </p>
+        </div>
     </div>
 </body>
 </html>
