@@ -1,3 +1,16 @@
+var startTime = null;
+
+function startGame(gameName) {
+    // code to start the game
+    startTime = new Date();
+}
+
+function endGame(gameName) {
+    // code to end the game
+    var endTime = new Date();
+    var duration = Math.round((endTime - startTime) / 1000); // duration in seconds
+    document.querySelector('.score1').innerHTML = 'Time Played: ' + duration + ' seconds';
+}
 
 var score_Pacman = document.getElementsByClassName('pacman');
 
