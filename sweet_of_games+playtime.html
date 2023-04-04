@@ -10,54 +10,37 @@
 <header><b>Retro Bundle</b></header>
 <body class="container">
     <script type="script/javascript" src="sweetofgames_script.js"></script>
-    <div class="score1"><!--container showing the time scoreboard   -->
-        Time Played: <span id="playtime">0</span> seconds
+    <div class="score1" style="display: none">
+        <!--container showing the time scoreboard   -->
+        Time Played: 0 seconds
     </div>
     <div class="score2">
         <section class="pacman">
             PacMan:
-            <script type="text/javascript" src="sweetofgames_script.js" ></script>
+            <button onclick="startGame('PacMan')" id="playpacman"></button>
         </section><br>
         <section class="bomberman">
             BomberMan:
+            <button onclick="startGame('BomberMan')" id="playbomberman"></button>
         </section><br>
         <section class="snake">
             Snake:
+            <button onclick="startGame('Snake')" id="playsnake"></button>
         </section>
     </div>
     <div class="col">
         <a href="login.html" class="btn btn-light btn-block">Log In</a>
     </div>
-    
-    <div class="select-game modal">
-        <div class="modal-content">
-          <h1>Click A Game!</h1>
-            <p>
-            <button onclick="pacmanclicked()" class="pacmanbtn" id="playpacman"></button>
-            &nbsp&nbsp&nbsp
-            <button onclick="bombermanclicked()" class="bombermanbtn" id="playbomberman"></button>
-            &nbsp&nbsp&nbsp
-            <button onclick="snakeclicked()" class="snakebtn" id="playsnake">   </button>
-            </p>
-        </div>
+    <div>
+        <button onclick="backbtn()" class="backbtn"> ◄ BACK / HOME  </button>
     </div>
     <div class="snakegame">
-        <canvas width="400" height="400" id="game"></canvas>
-    </div>
-
-    <script>
-        // game script
-        var startTime;
-        function startGame() {
-            startTime = Date.now();
-            // other game initialization code
-        }
-        function endGame() {
-            var endTime = Date.now();
-            var playtime = Math.floor((endTime - startTime) / 1000);
-            document.getElementById("playtime").innerText = playtime;
-            // other game ending code
-        }
-    </script>
-</body>
-</html>
+        <canvas width="400" height="400" id="snakecanvas"></canvas>
+        <script>
+            var canvas = document.getElementById('snakecanvas');
+            const context = canvas.getContext('2d');
+            // code to end the game
+            canvas.addEventListener('gameover', function() {
+                endGame('Snake');
+            });
+        </script>
