@@ -1,3 +1,16 @@
+var startTime = null;
+
+function startGame(gameName) {
+    // code to start the game
+    startTime = new Date();
+}
+
+function endGame(gameName) {
+    // code to end the game
+    var endTime = new Date();
+    var duration = Math.round((endTime - startTime) / 1000); // duration in seconds
+    document.querySelector('.score1').innerHTML = 'Time Played: ' + duration + ' seconds';
+}
 
 var score_Pacman = document.getElementsByClassName('pacman');
 
@@ -13,17 +26,23 @@ function snakeclicked() {
     document.querySelector(".select-game").style.display = "none";
     document.querySelector(".snakegame").style.display = "block";
 
+    startGame('Snake');
+
     requestAnimationFrame(loop);
 }
 
 function pacmanclicked() {
     document.querySelector(".select-game").style.display = "none";
     document.querySelector(".pacmangame").style.display = "block";
+
+    startGame('PacMan');
 }
 
 function bombermanclicked() {
     document.querySelector(".select-game").style.display = "none";
     document.querySelector(".bombermangame").style.display = "block";
+
+    startGame('BomberMan');
 
     var canvas = document.getElementById('bombermancanvas');
     var context = canvas.getContext('2d');
