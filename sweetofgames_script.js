@@ -1,3 +1,6 @@
+
+
+
 var startTime = null;
 
 function startGame(gameName) {
@@ -429,6 +432,12 @@ function bombermanclicked() {
 // game loop
 function loop() {
     requestAnimationFrame(loop);
+
+    // // timer for the ammount of the game played
+    // var timer = setInterval(clock, 1000);
+    // var msec = 00;
+    // var sec = 00;
+    // var min = 00;
 
     // slow game loop to 15 fps instead of 60 (60/15 = 4)
     if (++count < 4) {
