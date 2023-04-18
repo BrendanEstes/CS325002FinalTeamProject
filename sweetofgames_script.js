@@ -1,3 +1,34 @@
+const signed_in = false;
+const new_session = getElementById('newsession');
+
+
+function logedin(){
+    
+if (!signed_in){
+    window.location = "login.html";
+} else {
+    if ( getElementById(playpacman)){
+        pacmanclicked();
+    } else if (getElementById(bomerman)) {
+        bombermanclicked();
+    } else if (getElementById(playsnake)) {
+        snakeclicked();}
+}
+}
+
+
+class login{
+    constructor (name, email, password){
+        this.name = name;
+        this.email = email;
+        this.password = password;
+    }
+    create(){
+        const person = new login(name, email, password);
+        
+    }
+}
+
 
 
 
