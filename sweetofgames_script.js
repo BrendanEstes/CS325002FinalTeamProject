@@ -384,30 +384,44 @@ function bombermanclicked() {
         else if (e.which === 39) {
             col++;
         }
-        // down arrow key
         else if (e.which === 40) {
             row++;
         }
-        // space key (bomb) & mouse click
-        else if (
-             e.which === 32 && !cells[row][col] &&
-            // count the number of bombs the player has placed
-            entities.filter((entity) => {
-                return entity.type === types.bomb && entity.owner === player
-            }).length < player.numBombs
-        ) {
-            // place bomb
-            const bomb = new Bomb(row, col, player.bombSize, player);
-            entities.push(bomb);
-            cells[row][col] = types.bomb;
-        }
-
-        // don't move the player if something is already at that position
+     // don't move the player if something is already at that position
         if (!cells[row][col]) {
             player.row = row;
             player.col = col;
         }
-    });
+  // handle space bar press for bomb placement
+    if (e.which === 32) {
+        placeBomb();
+    }
+});
+
+document.addEventListener('click', function (e) {
+    let row = player.row;
+    let col = player.col;
+
+    // handle mouse click for bomb placement
+    if (!cells[row][col] &&
+        // count the number of bombs the player has placed
+        entities.filter((entity) => {
+            return entity.type === types.bomb && entity.owner === player;
+        }).length < player.numBombs
+    ) {
+        placeBomb();
+    }
+});
+
+function placeBomb() {
+    let row = player.row;
+    let col = player.col;
+
+    // place bomb
+    const bomb = new Bomb(row, col, player.bombSize, player);
+    entities.push(bomb);
+    cells[row][col] = types.bomb;
+}
 
     // start the game
     generateLevel();
