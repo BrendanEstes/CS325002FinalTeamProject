@@ -64,7 +64,16 @@ function snakeclicked() {
     requestAnimationFrame(loop);
 }
 
+function timer(){
+    var hour = 0;
+    var min = 0; 
+    var sec = 0;
+
+}
+
 function pacmanclicked() {
+
+    timer();
     document.querySelector(".select-game").style.display = "none";
     document.querySelector(".pacmangame").style.display = "block";
 
@@ -1057,9 +1066,10 @@ function bombermanclicked() {
         else if (e.which === 40) {
             row++;
         }
+        
         // space key (bomb)
         else if (
-            e.which === 32 && !cells[row][col] &&
+            (e.which === 32) && !cells[row][col] &&
             // count the number of bombs the player has placed
             entities.filter((entity) => {
                 return entity.type === types.bomb && entity.owner === player
