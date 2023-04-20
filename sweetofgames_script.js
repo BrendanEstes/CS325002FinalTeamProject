@@ -1,5 +1,19 @@
 const signed_in = false;
-const new_session = getElementById('newsession');
+// const new_session = getElementById('newsession');
+
+
+var button = document.getElementById("pause_button");
+var audio = document.getElementById("music");
+
+function muteSounds(){
+    if (document.getElementById('music').muted === false ){
+    document.getElementById('music').muted = true;
+    }
+    else {
+        document.getElementById('music').muted = false;
+    }
+    
+}
 
 
 function logedin(){
@@ -28,6 +42,11 @@ class login{
         
     }
 }
+
+
+// function pause(){
+//     music_pause.pause();
+// }
 
 
 
@@ -64,16 +83,27 @@ function snakeclicked() {
     requestAnimationFrame(loop);
 }
 
-function timer(){
-    var hour = 0;
-    var min = 0; 
-    var sec = 0;
+const pacManTimer = document.querySelector('#pacman');
+const bomberManTimer = document.querySelector('#pacman');
+const SnakeGameTimer = document.querySelector('#pacman');
 
-}
+// function timer(game){
+//     const score2 = document.getElementById('game');
+//     var hour = 0;
+//     var min = 0; 
+//     var sec = 0;
+
+
+
+// }
+
+// function UpdateTime(){
+
+// }
 
 function pacmanclicked() {
-
-    timer();
+    // timer(pacManTimer);
+    document.getElementById(pacman).timer();
     document.querySelector(".select-game").style.display = "none";
     document.querySelector(".pacmangame").style.display = "block";
 
@@ -1069,7 +1099,7 @@ function bombermanclicked() {
         
         // space key (bomb)
         else if (
-           ((e.type === "click" || (e.which === 32)) && !cells[row][col] &&
+           e.which === 32 && !cells[row][col] &&
             // count the number of bombs the player has placed
             entities.filter((entity) => {
                 return entity.type === types.bomb && entity.owner === player

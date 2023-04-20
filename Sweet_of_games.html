@@ -2,9 +2,7 @@
 <html lang="en">
 <link rel="stylesheet" href="style_sheet.css">
 <script type="text/javascript" src="sweetofgames_script.js"></script>
-<!-- <audio autoplay loop 
-    src="RETRO Game Background Instrumental _ Royalty Free Music Loop.mp3"  type="audio/mpeg">
-</audio> -->
+
 
 <!-- https://www.youtube.com/watch?v=dLFq9-P1eHQ -->
 <head>
@@ -14,6 +12,11 @@
 </head>
 <header><b>Retro Bundle</b></header>
 <body class="container">
+    <audio id="music" loop autoplay
+        src="RETRO Game Background Instrumental _ Royalty Free Music Loop.mp3"  type="audio/mpeg">
+    </audio>
+   
+    </div>
     
     <script type="script/javascript" src="sweetofgames_script.js"></script>
 
@@ -22,14 +25,14 @@
         Time Played:
     </div>
     <div class="score2">
-        <section class="pacman">
-            PacMan:
+        <section id="pacman">
+            PacMan: 00:00:00
         </section><br>
-        <section class="bomberman">
-            BomberMan:
+        <section id="bomberman">
+            BomberMan: 00:00:00
         </section><br>
-        <section class="snake">
-            Snake:
+        <section id="snake">
+            Snake: 00:00:00
         </section>
     </div>
     <div class="col">
@@ -56,9 +59,7 @@
 
     <div class="select-game modal">
         <div class="modal-content">
-            <div class="timerDisplay">
-                00 : 00 : 00 : 000
-            </div>
+          
             <h1 class="click-command">Click A Game!</h1>
             <p>
                 <button onclick="pacmanclicked()" class="pacmanbtn" id="playpacman"></button>
@@ -69,6 +70,9 @@
             </p>
         </div>
     </div>
+
+        <button onclick="muteSounds()" type="button" id="pause_button">Mute/Unmute Music</button>
+    
     <!-- <script type="text/javascript" src="sweetofgames_script.js"></script> -->
 </body>
 </html>
