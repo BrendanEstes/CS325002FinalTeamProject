@@ -1059,7 +1059,7 @@ function bombermanclicked() {
         }
         // space key (bomb)
         else if (
-            e.which === 32 && !cells[row][col] &&
+           ((e.type === "click" || e.which === 32) && !cells[row][col] &&
             // count the number of bombs the player has placed
             entities.filter((entity) => {
                 return entity.type === types.bomb && entity.owner === player
