@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="style_sheet.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="sweetofgames_script.js"></script>
+    <!-- <audio autoplay loop
+        src="RETRO Game Background Instrumental _ Royalty Free Music Loop.mp3"  type="audio/mpeg">
+    </audio> -->
+    <!-- https://www.youtube.com/watch?v=dLFq9-P1eHQ -->
+    <title>Sweet of Games Homepage</title>
+</head>
+<header><b>Retro Bundle</b></header>
+<body class="container">
+    <script type="script/javascript" src="sweetofgames_script.js"></script>
+    <div class="score1">
+        <!--container showing the time scoreboard   -->
+        Time Played
+    </div>
+    <div class="score2">
+        <section id="pacman">
+            PacMan: 00:00:00
+        </section><br>
+        <section id="bomberman">
+            BomberMan: 00:00:00
+        </section><br>
+        <section id="snake">
+            Snake: 00:00:00
+        </section>
+    </div>
+
+    <br />
+
+    <div class="score2">
+        <section class="score1"> Scores: </section>
+
+        <section>Pacman: <span id="pacmanScore">0</span></section>
+        <br />
+        <section>Bomberman: <span id="bombermanScore">0</span></section>
+        <br />
+        <section>Snake: <span id="snakeScore">0</span></section>
+
+    </div>
+    <div>
+        <audio src="RetroMusic.mp3" id="backgroundmusic"></audio>
+
+        <button class="playmusicbtn" onClick="playBackground()"> Play Audio </button>
+        <button class="playmusicbtn" onClick="pauseBackground()"> Pause Audio </button>
+    </div>
+    <div class="col">
+    <a href="login.html" class="btn btn-light btn-block">Log In</a>
+    </div>
+    <div>
+        <button onclick="backbtn()" class="backbtn"> ◄ BACK / HOME  </button>
+    </div>
+    <div class="snakegame">
+        <canvas width="400" height="400" id="snakecanvas"></canvas>
+        <div class="difficulty">
+            <button onclick="setDifficulty((snake.dx === grid) ? 'easy' : 'hard')">Toggle Difficulty</button>
+        </div>
+        <script>
+            var canvas = document.getElementById('snakecanvas');
+            const context = canvas.getContext('2d');
+        </script>
+    </div>
+
+    <div class="bombermangame">
+        <canvas width="960" height="832" id="bombermancanvas"></canvas>
+    </div>
+
+    <div class="pacmangame">
+        <canvas width="440" height="520" id="pacmancanvas"></canvas>
+    </div>
+
+    <div>
+        <button onclick="replaybtn()" class="replaybtn">Replay?</button>
+    </div>
+
+    <div class="select-game modal">
+        <div class="modal-content">
+            <h1 class="click-command">Click A Game!</h1>
+            <p>
+                <button onclick="pacmanclicked()" class="pacmanbtn" id="playpacman"></button>
+                &nbsp&nbsp&nbsp
+                <button onclick="bombermanclicked()" class="bombermanbtn" id="playbomberman"></button>
+                &nbsp&nbsp&nbsp
+                <button onclick="snakeclicked()" class="snakebtn" id="playsnake">   </button>
+            </p>
+        </div>
+    </div>
+    <!-- <script type="text/javascript" src="sweetofgames_script.js"></script> -->
+</body>
+</html>
