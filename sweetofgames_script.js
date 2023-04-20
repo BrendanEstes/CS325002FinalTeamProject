@@ -1,3 +1,41 @@
+const signed_in = false;
+
+function loggedIn(){
+  if (!signed_in){
+    window.location = "login.html";
+  } else {
+    const playPacman = document.getElementById('playpacman');
+    const playBomberman = document.getElementById('bomberman');
+    const playSnake = document.getElementById('playsnake');
+    
+    if (playPacman){
+      pacmanclicked(); 
+    } else if (playBomberman) {
+      bombermanclicked(); 
+    } else if (playSnake) {
+      snakeclicked(); 
+    }
+  }
+}
+
+class Login{
+  constructor(name, email, password){
+    this.name = name;
+    this.email = email;
+    this.password = password;
+  }
+  
+  // this function will be used to send login data to a server
+  create(){
+    const person = {
+      name: this.name,
+      email: this.email,
+      password: this.password
+    };
+    
+    // Send person data to server
+  }
+}
 var startTime = null;
 
 function startGame(gameName) {
