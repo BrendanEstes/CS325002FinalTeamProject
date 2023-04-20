@@ -44,8 +44,7 @@
     <div class="snakegame">
         <canvas width="400" height="400" id="snakecanvas"></canvas>
         <div class="difficulty">
-            <button onclick="setDifficulty('easy')">Easy</button>
-            <button onclick="setDifficulty('hard')">Hard</button>
+            <button onclick="setDifficulty((snake.dx === grid) ? 'easy' : 'hard')">Toggle Difficulty</button>  
         </div>
         <script>
             var canvas = document.getElementById('snakecanvas');
