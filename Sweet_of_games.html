@@ -1,25 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <link rel="stylesheet" href="style_sheet.css">
-<script type="text/javascript" src="sweetofgames_script.js"></script>
-<!-- <audio autoplay loop 
-    src="RETRO Game Background Instrumental _ Royalty Free Music Loop.mp3"  type="audio/mpeg">
-</audio> -->
-
-<!-- https://www.youtube.com/watch?v=dLFq9-P1eHQ -->
 <head>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="sweetofgames_script.js"></script>
+    <!-- <audio autoplay loop
+        src="RETRO Game Background Instrumental _ Royalty Free Music Loop.mp3"  type="audio/mpeg">
+    </audio> -->
+    <!-- https://www.youtube.com/watch?v=dLFq9-P1eHQ -->
+    <title>Sweet of Games Homepage</title>
 </head>
 <header><b>Retro Bundle</b></header>
 <body class="container">
-    
     <script type="script/javascript" src="sweetofgames_script.js"></script>
-
     <div class="score1">
         <!--container showing the time scoreboard   -->
-        Time Played:
+        Time Played
     </div>
     <div class="score2">
         <section class="pacman">
@@ -32,6 +29,21 @@
             Snake:
         </section>
     </div>
+
+    <br />
+
+    <div class="score2">
+        <section class="score1"> Scores: </section>
+
+        <section>Pacman: <span id="pacmanScore">0</span></section>
+        <br />
+        <section>Bomberman: <span id="bombermanScore">0</span></section>
+        <br />
+        <section>Snake: <span id="snakeScore">0</span></section>
+
+    </div>
+
+
     <div class="col">
         <a href="login.html" class="btn btn-light btn-block">Log In</a>
     </div>
@@ -51,14 +63,15 @@
     </div>
 
     <div class="pacmangame">
-        <canvas width="1024" height="576" id="pacmancanvas"></canvas>
+        <canvas width="440" height="520" id="pacmancanvas"></canvas>
+    </div>
+
+    <div>
+        <button onclick="replaybtn()" class="replaybtn">Replay?</button>
     </div>
 
     <div class="select-game modal">
         <div class="modal-content">
-            <div class="timerDisplay">
-                00 : 00 : 00 : 000
-            </div>
             <h1 class="click-command">Click A Game!</h1>
             <p>
                 <button onclick="pacmanclicked()" class="pacmanbtn" id="playpacman"></button>
