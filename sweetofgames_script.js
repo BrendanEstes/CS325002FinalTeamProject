@@ -1267,6 +1267,21 @@ var apple = {
     y: 320
 };
 
+function setDifficulty(level) {
+  if (level === 'easy') {
+    // Change the snake velocity to move slower for easy mode
+    snake.dx = grid / 2;
+    snake.dy = 0;
+  } else if (level === 'hard') {
+    // Change the snake velocity to move faster for hard mode
+    snake.dx = grid;
+    snake.dy = 0;
+  }
+
+  // Update the snake's maxCells to match the difficulty level
+  snake.maxCells = (level === 'easy') ? 3 : 4;
+}
+
 // get random whole numbers in a specific range
 // @see https://stackoverflow.com/a/1527820/2124254
 function getRandomInt(min, max) {
